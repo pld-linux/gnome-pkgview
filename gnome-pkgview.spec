@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9b5e07077f06b72acb4568fc13f6d715
+Patch0:		%{name}-locale-names.patch
 URL:		http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
@@ -37,6 +38,9 @@ ma³a aplikacja udostêpnia kilka u¿ytecznych informacji.
 
 %prep
 %setup -q
+%patch0 -p1
+
+mv po/{no,nb}.po
 
 %build
 intltoolize --copy --force
