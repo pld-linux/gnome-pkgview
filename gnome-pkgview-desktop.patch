@@ -1,0 +1,11 @@
+diff -urN aaa/gnome-pkgview-1.0.4/gnome-pkgview.desktop.in gnome-pkgview-1.0.4/gnome-pkgview.desktop.in
+--- aaa/gnome-pkgview-1.0.4/gnome-pkgview.desktop.in	2003-01-01 10:49:16.000000000 +0100
++++ gnome-pkgview-1.0.4/gnome-pkgview.desktop.in	2003-12-12 18:26:46.000000000 +0100
+@@ -6,6 +6,6 @@
+ Terminal=false
+ Type=Application
+ Icon=gnome-pkgview/pkgview.png
+-StartupNotify=true;
++StartupNotify=true
+ Categories=GNOME;Application;System;Utility;
+ Encoding=UTF-8
