@@ -1,12 +1,12 @@
 Summary:	Displays the version of GNOME desktop components installed
 Summary(pl):	Wy¶wietlanie wersji zainstalowanych komponentów ¶rodowiska GNOME
 Name:		gnome-pkgview
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	c62c4ac50cee5d4465c3ce1392f2b07e
+# Source0-md5:	9b5e07077f06b72acb4568fc13f6d715
 URL:		http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
