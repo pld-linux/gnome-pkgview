@@ -1,0 +1,13 @@
+diff -urN aaa/gnome-pkgview-1.0.2/src/desktop-version.c gnome-pkgview-1.0.2/src/desktop-version.c
+--- aaa/gnome-pkgview-1.0.2/src/desktop-version.c	2003-08-25 15:20:17.000000000 +0200
++++ gnome-pkgview-1.0.2/src/desktop-version.c	2003-08-28 08:54:09.000000000 +0200
+@@ -82,6 +82,9 @@
+ 	if ( g_file_test("/etc/SuSE-release",G_FILE_TEST_EXISTS) ) {
+                 return gnome_pixmap_file ("gnome-pkgview/suse.png");
+         }
++	if ( g_file_test("/etc/pld-release",G_FILE_TEST_EXISTS) ) {
++	              return gnome_pixmap_file ("gnome-pkgview/pld.png");
++        }
+ 
+ 
+ 	return gnome_pixmap_file ("gnome-pkgview/gnome.png");
