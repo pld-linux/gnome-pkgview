@@ -1,14 +1,12 @@
 Summary:	Displays the version of GNOME desktop components installed
 Summary(pl):	Wy¶wietlanie wersji zainstalowanych komponentów ¶rodowiska GNOME
 Name:		gnome-pkgview
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	8cabf2cacc011caa4a1ee6c6b4dacdf4
-Source1:	%{name}-pld.png
-Patch0:		%{name}-pld.patch
+# Source0-md5:	b27203e5a33653e877ce58315223332b
 URL:		http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
@@ -36,7 +34,6 @@ ma³a aplikacja udostêpnia kilka u¿ytecznych informacji.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure \
@@ -48,8 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}/pld.png
 
 %find_lang %{name}
 
