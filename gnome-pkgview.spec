@@ -1,5 +1,5 @@
 Summary:	Displays the version of GNOME desktop components installed
-Summary(pl):	Wy¶wietla wersje zainstalowanych komponentów ¶rodowiska GNOME
+Summary(pl):	Wy¶wietlanie wersji zainstalowanych komponentów ¶rodowiska GNOME
 Name:		gnome-pkgview
 Version:	1.0.2
 Release:	1
@@ -29,9 +29,9 @@ couple of useful pieces of information.
 %description -l pl
 Aktualnie nie ma prostej metody, która pozwala³aby sprawdziæ, która
 wersja GNOME jest aktualnie zainstalowana. Pytanie to jest powszechne
-na IRCu i listach dyskusyjnych. Sprawia to, ¿e proces odpluskwiania a
-udzielania pomocy jest trudniejszy dla tych co chc± pomóc. Ta ma³a
-aplikacja udostêpnia kilka u¿ytecznych informacji.
+na IRC-u i listach dyskusyjnych. Sprawia to, ¿e proces odpluskwiania i
+udzielania pomocy jest trudniejszy dla tych, którzy próbuj± pomóc. Ta
+ma³a aplikacja udostêpnia kilka u¿ytecznych informacji.
 
 %prep
 %setup -q
