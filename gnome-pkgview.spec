@@ -14,6 +14,7 @@ BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.0.0
+BuildRequires:	perl-XML-Parser
 Requires(post):	GConf2
 Requires:	gnome-desktop >= 2.4.0
 Requires:	pkgconfig
