@@ -1,16 +1,18 @@
 Summary:	Displays the version of GNOME desktop components installed
 Summary(pl):	Wy¶wietlanie wersji zainstalowanych komponentów ¶rodowiska GNOME
 Name:		gnome-pkgview
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	b27203e5a33653e877ce58315223332b
-Patch0:		%{name}-desktop.patch
+# Source0-md5:	c62c4ac50cee5d4465c3ce1392f2b07e
 URL:		http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 BuildRequires:	GConf2-devel >= 2.4.0
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
+BuildRequires:	intltool >= 0.29
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	perl-XML-Parser
@@ -35,9 +37,12 @@ ma³a aplikacja udostêpnia kilka u¿ytecznych informacji.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
+intltoolize --copy --force
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--disable-schemas-install
 %{__make}
