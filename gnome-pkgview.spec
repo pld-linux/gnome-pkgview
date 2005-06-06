@@ -13,11 +13,13 @@ URL:		http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	perl-XML-Parser
+BuildRequires:	pkgconfig
 Requires(post):	GConf2
 Requires:	gnome-desktop >= 2.4.0
 Requires:	pkgconfig
