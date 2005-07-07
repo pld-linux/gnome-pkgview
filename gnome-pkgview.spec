@@ -2,7 +2,7 @@ Summary:	Displays the version of GNOME desktop components installed
 Summary(pl):	Wy¶wietlanie wersji zainstalowanych komponentów ¶rodowiska GNOME
 Name:		gnome-pkgview
 Version:	1.0.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
@@ -20,7 +20,7 @@ BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.0.0
 BuildRequires:	perl-XML-Parser
 BuildRequires:	pkgconfig
-Requires(post):	GConf2
+Requires(post,preun):	GConf2
 Requires:	gnome-desktop >= 2.4.0
 Requires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,7 +47,7 @@ ma³a aplikacja udostêpnia kilka u¿ytecznych informacji.
 mv po/{no,nb}.po
 
 %build
-intltoolize --copy --force
+%{__intltoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -67,12 +67,15 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%gconf_schema_install
+%gconf_schema_install gnome-pkgview.schemas
+
+%preun
+%gconf_schema_uninstall gnome-pkgview.schemas
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/gconf/schemas/*.schemas
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
+%{_sysconfdir}/gconf/schemas/*.schemas
