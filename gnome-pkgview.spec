@@ -1,5 +1,5 @@
 Summary:	Displays the version of GNOME desktop components installed
-Summary(pl.UTF-8):   Wyświetlanie wersji zainstalowanych komponentów środowiska GNOME
+Summary(pl.UTF-8):	Wyświetlanie wersji zainstalowanych komponentów środowiska GNOME
 Name:		gnome-pkgview
 Version:	1.0.6
 Release:	3
