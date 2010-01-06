@@ -5,7 +5,7 @@ Version:	1.0.6
 Release:	3
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.greatnorthern.demon.co.uk/packages/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/%{name}-%{version}.tar.gz
 # Source0-md5:	9b5e07077f06b72acb4568fc13f6d715
 Patch0:		%{name}-locale-names.patch
 Patch1:		%{name}-desktop.patch
@@ -14,6 +14,7 @@ BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-common
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libgnomeui-devel >= 2.4.0
